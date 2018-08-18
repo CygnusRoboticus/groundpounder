@@ -1,40 +1,38 @@
-const { Application } = require('probot')
-// Requiring our app implementation
-const myProbotApp = require('..')
+import { Application } from 'probot';
+import groundpounder from '../index';
+import prOpenedPayload from './fixtures/issues.opened.json';
 
-const issuesOpenedPayload = require('./fixtures/issues.opened.json')
+import assert from 'assert';
+import { describe, it } from 'mocha';
+import sinon from 'sinon';
 
-test('that we can run tests', () => {
-  // your real tests go here
-  expect(1 + 2 + 3).toBe(6)
-})
-
-describe('My Probot app', () => {
+describe('Groundpounder', () => {
   let app, github
 
   beforeEach(() => {
     app = new Application()
     // Initialize the app based on the code from index.js
-    app.load(myProbotApp)
+    app.load(groundpounder)
     // This is an easy way to mock out the GitHub API
     github = {
       issues: {
-        createComment: jest.fn().mockReturnValue(Promise.resolve({}))
+        createComment() {
+          return Promise.resolve({});
+        }
       }
     }
     // Passes the mocked out GitHub API into out app instance
     app.auth = () => Promise.resolve(github)
   })
 
-  test('creates a comment when an issue is opened', async () => {
-    // Simulates delivery of an issues.opened webhook
+  it('creates a comment when an pullRequest is opened', async () => {
+    const spy = sinon.spy(github.issues, 'createComment')
     await app.receive({
-      event: 'issues.opened',
-      payload: issuesOpenedPayload
+      event: 'pull_request.opened',
+      payload: prOpenedPayload
     })
 
-    // This test passes if the code in your index.js file calls `context.github.issues.createComment`
-    expect(github.issues.createComment).toHaveBeenCalled()
+    assert(spy.called)
   })
 })
 
