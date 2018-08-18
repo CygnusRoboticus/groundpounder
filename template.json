@@ -1,0 +1,25 @@
+{
+  "name": "Groundpounder",
+  "checklist": {
+    "tracker": "<!--groundpounder-->",
+    "lines": [
+      "**PR Checklist**",
+      "",
+      "- [ ] The code in this PR is fully tested.",
+      "- [ ] The code has been optimized for the person reading this after you. Is your intent clear?",
+      "- [ ] You've hand-tested this code in the Review app."
+    ]
+  },
+  "check": {
+    "title": {
+      "running": "Running",
+      "success": "Okay to merge",
+      "failure": "Finish your PR checklist"
+    },
+    "summary": {
+      "running": "",
+      "success": "",
+      "failure": ""
+    }
+  }
+}
