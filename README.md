@@ -1,6 +1,6 @@
 # groundpounder
 
-> A GitHub App built with [Probot](https://github.com/probot/probot) that A Probot app
+> A GitHub App built with [Probot](https://github.com/probot/probot) that checks PR bodies for checklists and ensures that all items are checked off.
 
 ## Setup
 
