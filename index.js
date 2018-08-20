@@ -9,8 +9,7 @@ module.exports = function (app) {
     'pull_request.opened',
     'pull_request.reopened',
     'pull_request.synchronize',
-    'pull_request.edited',
-    'pull_request_review'
+    'pull_request.edited'
   ], async context => {
     new Handler(context).execute();
   });
