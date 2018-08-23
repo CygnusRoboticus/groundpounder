@@ -21,4 +21,3 @@ For more, check out the [Contributing Guide](CONTRIBUTING.md).
 ## License
 
 [ISC](LICENSE) © 2018 Joshua Harris <joshuadaleharris@gmail.com>
-asdf
