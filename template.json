@@ -1,10 +1,22 @@
 {
   "name": "Groundpounder",
-  "check": {
+  "checklist": {
     "title": {
       "running": "Running",
       "success": "Okay to merge",
       "failure": "Finish your PR checklist"
+    },
+    "summary": {
+      "running": "",
+      "success": "",
+      "failure": ""
+    }
+  },
+  "conflict": {
+    "title": {
+      "running": "Running",
+      "success": "Okay to merge",
+      "failure": "Correct merge conflicts"
     },
     "summary": {
       "running": "",
