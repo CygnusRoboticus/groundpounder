@@ -4,24 +4,16 @@
     "title": "Running",
     "summary": ""
   },
+  "success": {
+    "title": "Okay to merge",
+    "summary": ""
+  },
   "checklist": {
-    "title": {
-      "success": "Okay to merge",
-      "failure": "Finish your PR checklist"
-    },
-    "summary": {
-      "success": "",
-      "failure": ""
-    }
+    "title": "Finish your PR checklist",
+    "summary": ""
   },
   "conflict": {
-    "title": {
-      "success": "Okay to merge",
-      "failure": "Correct merge conflicts"
-    },
-    "summary": {
-      "success": "",
-      "failure": ""
-    }
+    "title": "Correct merge conflicts",
+    "summary": ""
   }
 }
